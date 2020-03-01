@@ -37,8 +37,9 @@ int main()
   scanf("%i", &n);
 
   v = (int *)malloc(sizeof(int) * n);
-  for(i = 0; i<n; i++){
-    *(v+i) = i%2;
+  for (i = 0; i < n; i++)
+  {
+    *(v + i) = i % 2;
   }
   imprimirArreglo(v, n);
   printf("Ingrese el numero que quiere eliminar: ");
