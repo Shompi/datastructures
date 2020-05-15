@@ -1,18 +1,18 @@
 /*Arreglo con puntero*/
 #include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+  // Creamos un puntero y le alocamos 10 espacios de memoria.
+  int *vector = (int)malloc(sizeof(int) * 10);
 
-int main(){
-  int v[20];
+  // Llenamos el puntero con datos.
   int i;
-  int *puntero;
-  for(i=0; i<20; i++){
-    v[i] = i+1;
+  for (i = 0; i < 10; i++)
+  {
+    *(vector + i) = i + 1; //1-2-3-4-5-6-7-8-9-10
+    printf("[%i]", *(vector + i));
   }
 
-  puntero = v;
-
-  for(i=0; i<20; i++){
-    printf("[%i] ", puntero[i]);
-  }
+  return (0);
 }
-
